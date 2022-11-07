@@ -48,3 +48,21 @@ Implement setenv and unsetenv built-in commands
 
 10 - cd
 Implement the built in command cd(changes current directory)
+
+11 - ;
+A UNIX command that handles command separator ;
+
+12 - && and ||
+A UNIX program that handles the && and || shell logical operators
+
+13 - alias
+A UNIX program that implements the alias built-in command
+
+14 - Variables
+A UNIX program tha handles variable replacements, $? and $$ variables.
+
+15 - Comments
+A UNIX program tha can handle comments(#)
+
+16 - File as input
+Usage: Simple_shell [filename]
