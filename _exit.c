@@ -1,38 +1,73 @@
 #include "shell.h"
 
 /**
-  * _handle_exit - ...
-  * @u_tokns: ...
-  * @line: ...
-  *
-  * Return: Nothing to returns
-  */
-void _handle_exit(char **u_tokns, char *line)
+ * *_strncpy - copies a string
+ * @dest: the destination tring to be copied to
+ * @src: the source string
+ * @n: the amount of characters to ne copied
+ * Return: the concatenated string
+ */
+char *_strncpy(char *dest, char *src, int n)
 {
-	int status = 0;
+	int i, j;
+	char *s = dest;
 
-	if (u_tokns[1] == NULL || (!_strcmp(u_tokns[1], "0")))
+	i = 0;
+	while (src[1] != '\0' && i < n - 1)
 	{
-		frees_tokens(u_tokns);
-		free(line);
-		exit(0);
+		dest[i] = src[i];
+		i++;
 	}
-	status = _atoi(u_tokns[1]);
-	if (status != 0)
+	if (i < n)
 	{
-		frees_tokens(u_tokns);
-		free(line);
-		exit(status);
+		j = i;
+		while (j < n)
+		{
+			dest[j] = '\0';
+			j++;
+		}
 	}
-	else
-	{
-		_puts("exit: Illegal number: ");
-		_puts(u_tokns[1]);
-		_puts("\n");
-		exit(2);
-	}
+	return (s);
+}
 
-	frees_tokens(u_tokns);
-	free(line);
-	exit(EXIT_SUCCESS);
+/**
+ * *strncat - concatenates two strings
+ * @dest: the first string
+ * @src: the second string
+ * @n: the amount of bytesto be maximally  used
+ * Return: the conacatenated string
+ */
+char *strncat(char *dest, char *src, int n)
+{
+	int i, j;
+	char *s = dest;
+
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[j] != '\0' && j < n)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	if (j < n)
+		dest[i] = '\0';
+	return (s);
+}
+
+/**
+ * *_strchr - locates a character string
+ * @s: the string to be passed
+ * @c: the charcter to look for
+ * Return: (s) a pointer to the memory area s
+ */
+char *_strchr(char *s, char c)
+{
+	do {
+		if (*s == c)
+			return (s);
+	} while (*s++ != '\0');
+	return (NULL);
 }
