@@ -7,7 +7,7 @@ Omiti.
 The tasks in this project are:
 
 0 - A program that passes betty checks
-This is a simple program that passes all betty 
+This is a simple program that passes all betty
 documentation and styles checks.
 
 1 - Simple shell 0.1
@@ -43,7 +43,7 @@ Not allowed to use strtok
 A UNIX program that handles arguments for the built-in exit
 Usage: exit status(where status is is an integer used to exit the shell)
 
-9 - Simple Shell 
+9 - Simple Shell
 Implement setenv and unsetenv built-in commands
 
 10 - cd
