@@ -1,4 +1,4 @@
-.TH hsh 1 "November 2022" 1.0 "Simple shell"
+.TH HSH 1 "16 Nov 2022" "0.1" "Simple shell"
 
 .SH NAME
 .B Simple shell
@@ -9,7 +9,7 @@ command[-o option_name][command_file[argument ...]]
 
 .SH DESCRIPTION
 .B simple_shell
-command line interpreter based on the first Unix shell 'sh',
+command line interpreter based on the first Unix shell
 created by Ken Thompson in 1971.
 simple_shell is intentionally minimalistic and contains functionality for only
 the most basic shell tasks - accepting input, parsing the input into a command
@@ -22,8 +22,8 @@ shell is considered interactive
 command line arguments besides the options have been specified,
 then the shell treats the first argument as
 the name of a file from which to read commands(a shell script),
-and the remaining arguments are set as the posi‐
-tional parameters of the shell($1, $2, etc)
+and the remaining arguments are set as the
+positional parameters of the shell($1, $2, etc)
 Otherwise, the shell reads commands from its standard input.
 
 .SH BUILTINS
@@ -33,7 +33,6 @@ Prints all of the environment variables
 .RE
 
 .B exit
-[\fIEXIT_STATUS\fR]
 .RS 6
 Exits the shell with an optional integer exit status
 .RE
@@ -48,8 +47,7 @@ Control - C has been disabled
 
 .SH KNOWN BUGS
 If  you  find  a  bug  in simple shell,  you should report it,
-and confirm it doesn't appear
-in the latest version of simple shell.
+and confirm it is not in the latest version of simple shell.
 
 ALL bug reports should include :
 
@@ -57,17 +55,15 @@ The version number of simple shell
 The hardware and operating system
 The compiler used to compile
 A description of the bug behaviour
-A short script or `recipe' which exercises the bug
+A short script or recipe which exercises the bug.
 
 Comments and bug reports concerning this manual page should be directed to
-omitifranc@gmail.com or franblog7@gmail.com.
+omitifrancgmail.com or franblog7gmail.com.
 
 .SH AUTHORS
 Francis Omiti
-<omitifranc@gmail.com>
 
 Francis Onyach
-<franblog7@gmail.com>
 
 .SH SEE ALSO
 .B sh
